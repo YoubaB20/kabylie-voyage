@@ -1,0 +1,428 @@
+
+/* LES FONTS */
+@font-face{
+    font-family: "Rubik";
+    src: url('../fonts/Rubik/Rubik-Regular.ttf');
+    font-style: normal;
+}
+/* FIN DES FONTS */
+
+/* LES COULEURS */
+/* BLUE -> #233142 */
+/* PRIMARY -> #007bff */
+/*# FIN LES COULEURS #*/
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik",-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    background: #ffffff;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+/***************************************** LA NAVBAR*****************************************/
+.navbar-nav .nav-link{
+    font-weight: bold;
+    margin-right: .25rem;
+}
+
+/*######################################## LA NAVBAR########################################*/
+
+
+/***************************************** LA NAVBAR ADMINISTRATION *****************************************/
+.link-sing-out{
+    font-size: 24px;
+}
+/*######################################## LA NAVBAR ADMINISTRATION ########################################*/
+/***************************************** LE WRAPPER *****************************************/
+
+/***************** LA SIDEBAR *****************/
+.sidebar{
+    position: relative;
+    width: 225px;
+    min-width: 225px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.sidebar-content{
+    position: fixed;
+    width: 225px;
+    min-width: 225px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 56px 0 0;
+}
+/* style des lien de la sidebar */
+.sidebar .sidebar-link-presentation{
+    letter-spacing: .5px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.sidebar .link-sidebar{
+    font-size: 14px;
+    font-weight: 500;
+    color: #343a40;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.link-sidebar.active{
+    color: #007bff;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.sidebar .link-sidebar i{
+    color: #bdbdbd;
+}
+.link-sidebar:hover> i{
+    color: #343a40;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.link-sidebar.active> i{
+    color: #007bff;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+/* fin du style des lien de la sidebar */
+/*############# FIN DE LA SIDEBAR #############*/
+
+/***************** LE CONTAINER *****************/
+.container{
+    margin-top: 56px;
+    padding-top: 15px;
+}
+/* Styles personnalisées */
+.alert-danger {
+    background-color: #e53935;
+    border-color: #e53935;
+    color: #fff;
+}
+.alert-success{
+    background-color: #34a853;
+    border-color: #34a853;
+    color: #fff;
+}
+.alert-warning {
+    background-color: #faa800;
+    border-color: #faa800;
+    color: #fff;
+}
+.alert-info {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+.alert-danger .span-alert::before,
+.alert-warning .span-alert::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/alert-icone/error.png) center center no-repeat;
+    vertical-align: -6px;
+    margin-right: 15px;
+}
+.alert-success .span-alert::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/alert-icone/success.png) center center no-repeat;
+    vertical-align: -6px;
+    margin-right: 15px;
+}
+.alert-info .span-alert::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/alert-icone/info.png) center center no-repeat;
+    vertical-align: -6px;
+    margin-right: 15px;
+}
+/* Fin du styles personnalisées */
+
+
+/* titre de presentation */
+span.title-voyager {
+    font-weight: bold;
+}
+/*# fin titre de presentation */
+
+/* style des cartes  */
+
+/* les cartes séjours et hotels*/
+.card-img{
+    height: 180px;
+    max-height: 180px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+/* style rubbons */
+/* rubbons sejours */
+.card-price{
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background: #007bff;
+    padding: 3px 6px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 2px 5px 10px #313a4626;
+}
+.card-price::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-bottom: solid 10px transparent;
+    border-right: solid 10px #0055b1;
+}
+.card-montant{
+    letter-spacing: 2px;
+}
+.card-montant::before {
+    content: "";
+    border-top: 20px solid #007bff;
+    border-right: 21px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+.card-montant::after {
+    content: "";
+    border-bottom: 20px solid #007bff;
+    border-right: 20px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: -19px;
+}
+/* fin rubbons sejours */
+/* fin style rubbons */
+.card-title{
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.card-country, .card-notation{
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+span.notation-hotel{
+    font-size: 12px;
+    font-weight: bold;
+}
+.position-icon{
+    color: #ef5350;
+}
+.card-text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 3;
+    height: 66px;
+    min-height: 66px; 
+}
+.card-action{
+    white-space: nowrap;
+}
+.card-btn , .btn-afficher{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.btn-view-all-offer{
+    letter-spacing: 2px;
+}
+/* fin style des cartes séjours et hotels */
+
+/* style des cartes de vols */
+.icon-companie-vol{
+    width: 35px;
+    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+}
+.card-vol-prix{
+    opacity: 1 !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.card-vol-ville{
+    font-weight: bold;
+}
+.card-vol-ville,.card-vol-date{
+    white-space: nowrap;
+}
+/*## fin du style des cartes de vols */
+
+/* style des tables listes des offres */
+.action-td,.date-reservation{
+    white-space: nowrap;
+}
+/*## fin style des tables listes des offres */
+
+/* style consultation séjour */
+.img-consultation{
+    max-width: 100% !important;
+    max-height: 100%;
+    height: 342px;
+    width: 624px;
+}
+
+.details-offre h5, .details-offre h6{
+    font-weight: bold;
+}
+/*## fin style des tables listes des offres */
+
+/* style tableau (liste des offre) */
+.nav-tabs .nav-link{
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+th{
+    white-space: nowrap;
+}
+/*## fin style tableau (liste des offre) */
+
+/*############# FIN DU CONTAINER #############*/
+
+/* modal suppression */
+.modal-body p{
+    font-size: 16px !important;
+    font-style: normal !important;
+}
+/*#### modal suppression */
+
+/************* CONNEXION ADMIN *************/
+.form-signin {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: auto;
+}
+.connexion-admin{
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+/*############ CONNEXION ADMIN #############*/
+
+/************* LISTE DES AGENT(EQUIPE) *************/
+.equipe{
+    padding: 0;
+}
+.equipe li{
+    list-style-type: none;
+    letter-spacing: 1px;
+}
+/*############ FIN LISTE DES AGENT(EQUIPE) #############*/
+/************* FORMULAIRES *************/
+.contact-form,
+.sing-in-form,
+.log-in-form,
+.validate-reserve-form,
+.confirm-reserve-form{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.form-control-plaintext{
+    font-weight: bold;
+}
+.form-control[readonly]{
+    background-color: #ffffff;
+}
+/*############ FORMULAIRES #############*/
+
+/*############ PAGE A PROPOS #############*/
+.card-img-agent{
+    border: none !important;
+}
+.img-agent{
+    max-width: auto;
+    max-height: auto;
+    height: 200px;
+    width: 200px;
+}
+/************* FIN PAGE A PROPOS *************/
+
+/************* FOOTER *************/
+.footer{
+    height: auto;
+}
+/************* FIN FOOTER *************/
+
+
+/*######################################## FIN DU WRAPPER ########################################*/
+
+
+/********************************** MEDIA QUIRES **********************************/
+
+@media only screen and (min-width: 992px){
+    .navbar-administration{
+        max-height: 56px !important;
+        height: 56px !important;
+    }
+
+}
+@media only screen and (max-width: 992px){
+    .container{
+        padding-top: 35px;
+        
+    }
+    .navbar-nav{
+        text-align: center;
+    }
+    .navbar-nav .nav-link{
+        margin-right: 0;
+    }
+    .btn-sing-in-navbar{
+        margin-right: 0 !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }    
+    .btn-log-in-navbar{
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 576px){
+/* style consultation séjour */
+.img-consultation{
+    height: auto;
+}
+.card-vol-prix{
+    display: none;
+}
+/*## fin style des tables listes des offres */
+}
